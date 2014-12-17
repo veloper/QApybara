@@ -1,7 +1,7 @@
 shared_steps 'login' do |email, password, options|
 
   Given "I'm on the login page" do
-    $env_config.subdomain = optoins.fetch(:subdomain, nil)
+    $env_config.subdomain = options.fetch(:subdomain, nil)
     visit '/login'
   end
 
